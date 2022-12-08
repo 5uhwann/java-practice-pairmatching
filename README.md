@@ -1,4 +1,4 @@
-# 미션 - 페어매칭관리 애플리케이션
+# 미션 - 페어매칭관리 애플리케이션(우테코 프리코스)
 
 ## 🔍 진행방식
 
@@ -6,22 +6,7 @@
 - 세 개의 요구사항을 만족하기 위해 노력한다. 특히 기능을 구현하기 전에 기능 목록을 만들고, 기능 단위로 커밋 하는 방식으로 진행한다.
 - 기능 요구사항에 기재되지 않은 내용은 스스로 판단하여 구현한다.
 
-## ✉️ 미션 제출 방법
 
-- 미션 구현을 완료한 후 GitHub을 통해 제출해야 한다.
-    - GitHub을 활용한 제출 방법은 [프리코스 과제 제출 문서](https://github.com/woowacourse/woowacourse-docs/tree/master/precourse) 를 참고해 제출한다.
-- GitHub에 미션을 제출한 후 [우아한테크코스 지원 플랫폼](https://apply.techcourse.co.kr) 에 접속하여 프리코스 과제를 제출한다.
-    - 자세한 방법은 [링크](https://github.com/woowacourse/woowacourse-docs/tree/master/precourse#제출-가이드) 를 참고한다.
-    - **Pull Request만 보내고, 지원 플랫폼에서 과제를 제출하지 않으면 최종 제출하지 않은 것으로 처리되니 주의한다.**
-
-## ✔️ 과제 제출 전 체크리스트 - 0점 방지
-
-- 터미널에서 `java -version`을 실행해 자바 8인지 확인한다. 또는 Eclipse, IntelliJ IDEA와 같은 IDE의 자바 8로 실행하는지 확인한다.
-- 터미널에서 맥 또는 리눅스 사용자의 경우 `./gradlew clean test`, 윈도우 사용자의 경우 `gradlew.bat clean test` 명령을 실행했을 때 모든 테스트가 아래와 같이 통과하는지 확인한다.
-
-```
-BUILD SUCCESSFUL in 0s
-```
 
 ---
 
@@ -367,10 +352,37 @@ public class Crew {
 
 ---
 
-## 📈 과제 진행 요구사항
+# 페어매칭
 
-- 미션은 [java-pairmatching-precourse](https://github.com/woowacourse/java-pairmatching-precourse) 저장소를 Fork/Clone해 시작한다.
-- **기능을 구현하기 전에 java-pairmatching-precourse/docs/README.md 파일에 구현할 기능 목록을 정리**해 추가한다.
-- **Git의 커밋 단위는 앞 단계에서 README.md 파일에 정리한 기능 목록 단위**로 추가한다.
-    - [AngularJS Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153) 참고해 commit log를 남긴다.
-- 과제 진행 및 제출 방법은 [프리코스 과제 제출 문서](https://github.com/woowacourse/woowacourse-docs/tree/master/precourse) 를 참고한다.
+## 구현 기능 목록
+
+### 입출력
+- 입력
+  - [ ] 사용자 입력
+
+- 출력
+  - [ ] 출력 메시지 출력
+
+### 파일 리더
+- [ ] 파일 데이터 변환 -> String 
+
+### 크루 관리
+- [ ] 크루원 목록 생성 
+- [ ] 크루 생성
+
+### 매칭 관리
+- [ ] 페어 매칭 
+- [ ] 매칭 조회
+- [ ] 페어 초기화
+
+### 검증
+- [ ] 사용자 입력값 검증
+
+
+## 핵심 실행 로직
+
+1. 프로그램 실행
+2. 파일 데이터 변환
+3. 크루원 목록 생성
+4. 기능 선택
+5. 페어 매칭, 결과 출력 or 페어 조회 or 페어 초기화
