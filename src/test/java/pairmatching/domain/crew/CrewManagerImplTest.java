@@ -28,4 +28,22 @@ class CrewManagerImplTest {
         }
     }
 
+    @Test
+    @DisplayName("변환된 파일 데이터로 프론트엔드 크루원 리스트를 만든다.")
+    void makeFrontendCrewMembersTest() {
+        //given
+        List<String> convertedFile = List.of("수환", "백호", "치수");
+
+        //when
+        FrontendCrewMembers frontendCrewMembers = crewManager.makeFrontendCrewMembers(convertedFile);
+
+        //then
+        assertThat(frontendCrewMembers.getFrontendCrewMembers().size()).isEqualTo(3);
+
+        for (Member frontendCrewMember : frontendCrewMembers.getFrontendCrewMembers()) {
+            assertThat(convertedFile).contains(frontendCrewMember.getMemberName());
+            assertThat(frontendCrewMember.getCourse()).isEqualTo(Course.FRONTEND);
+        }
+    }
+
 }
