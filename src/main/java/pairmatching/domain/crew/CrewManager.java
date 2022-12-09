@@ -6,4 +6,5 @@ public interface CrewManager {
 
     BackendCrewMembers makeBackendCrewMembers(List<String> convertedFile);
 
+    FrontendCrewMembers makeFrontendCrewMembers(List<String> convertedFile);
 }
