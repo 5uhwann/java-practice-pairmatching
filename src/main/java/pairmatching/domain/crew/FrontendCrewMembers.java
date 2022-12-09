@@ -6,14 +6,14 @@ import java.util.List;
 
 public class FrontendCrewMembers {
 
-    private final List<Member> frontendCrewMembers;
+    private final List<Crew> frontendCrews;
 
-    public FrontendCrewMembers(List<Member> frontendCrewMembers) {
-        this.frontendCrewMembers = new ArrayList<>(frontendCrewMembers);
+    public FrontendCrewMembers(List<Crew> frontendCrews) {
+        this.frontendCrews = new ArrayList<>(frontendCrews);
     }
 
-    public List<Member> getFrontendCrewMembers() {
-        return Collections.unmodifiableList(frontendCrewMembers);
+    public List<Crew> getFrontendCrews() {
+        return Collections.unmodifiableList(frontendCrews);
     }
 
 }

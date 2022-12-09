@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface CrewManager {
 
-    BackendCrewMembers makeBackendCrewMembers(List<String> convertedFile);
+    BackendCrews makeBackendCrews(List<String> convertedFile);
 
-    FrontendCrewMembers makeFrontendCrewMembers(List<String> convertedFile);
+    FrontendCrewMembers makeFrontendCrews(List<String> convertedFile);
 }

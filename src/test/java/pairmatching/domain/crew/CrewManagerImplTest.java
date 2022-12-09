@@ -17,14 +17,14 @@ class CrewManagerImplTest {
         List<String> convertedFile = List.of("수환", "백호", "치수");
 
         //when
-        BackendCrewMembers backendCrewMembers = crewManager.makeBackendCrewMembers(convertedFile);
+        BackendCrews backendCrews = crewManager.makeBackendCrews(convertedFile);
 
         //then
-        assertThat(backendCrewMembers.getBackendCrewMembers().size()).isEqualTo(3);
+        assertThat(backendCrews.getBackendCrews().size()).isEqualTo(3);
 
-        for (Member backendCrewMember : backendCrewMembers.getBackendCrewMembers()) {
-            assertThat(convertedFile).contains(backendCrewMember.getMemberName());
-            assertThat(backendCrewMember.getCourse()).isEqualTo(Course.BACKEND);
+        for (Crew backendCrewCrew : backendCrews.getBackendCrews()) {
+            assertThat(convertedFile).contains(backendCrewCrew.getCrewName());
+            assertThat(backendCrewCrew.getCourse()).isEqualTo(Course.BACKEND);
         }
     }
 
@@ -35,14 +35,14 @@ class CrewManagerImplTest {
         List<String> convertedFile = List.of("수환", "백호", "치수");
 
         //when
-        FrontendCrewMembers frontendCrewMembers = crewManager.makeFrontendCrewMembers(convertedFile);
+        FrontendCrewMembers frontendCrews = crewManager.makeFrontendCrews(convertedFile);
 
         //then
-        assertThat(frontendCrewMembers.getFrontendCrewMembers().size()).isEqualTo(3);
+        assertThat(frontendCrews.getFrontendCrews().size()).isEqualTo(3);
 
-        for (Member frontendCrewMember : frontendCrewMembers.getFrontendCrewMembers()) {
-            assertThat(convertedFile).contains(frontendCrewMember.getMemberName());
-            assertThat(frontendCrewMember.getCourse()).isEqualTo(Course.FRONTEND);
+        for (Crew frontendCrew : frontendCrews.getFrontendCrews()) {
+            assertThat(convertedFile).contains(frontendCrew.getCrewName());
+            assertThat(frontendCrew.getCourse()).isEqualTo(Course.FRONTEND);
         }
     }
 
