@@ -364,7 +364,7 @@ public class Crew {
   - [ ] 출력 메시지 출력
 
 ### 파일 컨버터
-- [ ] 파일 데이터 변환 -> List<String> 
+- [X] 파일 데이터 변환 -> List<String> 
 
 ### 크루 관리
 - [ ] 크루원 목록 생성 
