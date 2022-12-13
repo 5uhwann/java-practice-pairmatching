@@ -1,5 +1,7 @@
 package pairmatching.domain.pair.preinformation;
 
+import java.util.Arrays;
+
 public enum Mission {
     RACING("자동차경주"),
     LOTTO("로또"),
@@ -18,5 +20,12 @@ public enum Mission {
 
     public String getMissionName() {
         return missionName;
+    }
+
+    public static Mission findMission(String missionName) {
+        return Arrays.stream(values())
+                .filter(mission -> mission.getMissionName().equals(missionName))
+                .findAny()
+                .orElseThrow();
     }
 }
