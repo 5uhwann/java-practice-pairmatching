@@ -35,7 +35,7 @@ class CrewManagerImplTest {
         List<String> convertedFile = List.of("수환", "백호", "치수");
 
         //when
-        FrontendCrewMembers frontendCrews = crewManager.makeFrontendCrews(convertedFile);
+        FrontendCrews frontendCrews = crewManager.makeFrontendCrews(convertedFile);
 
         //then
         assertThat(frontendCrews.getFrontendCrews().size()).isEqualTo(3);

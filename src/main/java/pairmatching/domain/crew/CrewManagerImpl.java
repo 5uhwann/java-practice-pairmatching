@@ -15,11 +15,11 @@ public class CrewManagerImpl implements CrewManager{
     }
 
     @Override
-    public FrontendCrewMembers makeFrontendCrews(List<String> convertedFile) {
+    public FrontendCrews makeFrontendCrews(List<String> convertedFile) {
         List<Crew> frontendCrews = convertedFile.stream()
                 .map(name -> new Crew(Course.FRONTEND, name))
                 .collect(Collectors.toList());
 
-        return new FrontendCrewMembers(frontendCrews);
+        return new FrontendCrews(frontendCrews);
     }
 }
